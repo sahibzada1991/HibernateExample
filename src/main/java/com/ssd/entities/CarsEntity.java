@@ -13,7 +13,7 @@ public class CarsEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
 	@Column(name = "vin_number")
 	private String vinNumber;
@@ -31,7 +31,7 @@ public class CarsEntity {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -65,6 +65,12 @@ public class CarsEntity {
 
 	public void setYear(int year) {
 		this.year = year;
+	}
+
+	@Override
+	public String toString() {
+		return "CarsEntity [id=" + id + ", vinNumber=" + vinNumber + ", make=" + make + ", model=" + model + ", year="
+				+ year + "]";
 	}
 
 }
